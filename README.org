@@ -1,3 +1,8 @@
+Quick-and-dirt port of ob-ocaml for fsharp. This needs more work to
+get a full-blown fsharp babel code evaluator. A possible path for
+future development is to use the ~Interactive~ properties of fsharp's
+REPL to set an ad hoc printer for org-babel evaluation.
+
 #+BEGIN_SRC fsharp
 seq { 0 .. 10 .. 100 } |> Array.ofSeq
 #+END_SRC
