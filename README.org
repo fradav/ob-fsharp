@@ -3,7 +3,7 @@ get a full-blown fsharp babel code evaluator. A possible path for
 future development is to use the ~Interactive~ properties of fsharp's
 REPL to set an ad hoc printer for org-babel evaluation.
 
-#+BEGIN_SRC fsharp
+#+BEGIN_SRC fsharp :exports both
 seq { 0 .. 10 .. 100 } |> Array.ofSeq
 #+END_SRC
 
