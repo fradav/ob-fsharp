@@ -115,7 +115,7 @@
 (defconst inferior-ob-fsharp-buffer-name
   (concat "*" inferior-ob-fsharp-buffer-subname "*"))
 
-(defun fsharp-run-process-if-needed (&optional cmd)
+(defun fsharp-run-ob-process-if-needed (&optional cmd)
   "Launch fsi if needed, using CMD if supplied."
   (if (comint-check-proc inferior-ob-fsharp-buffer-name) nil
     (if (not cmd)
@@ -152,7 +152,7 @@
   "If there is not a current inferior-process-buffer in SESSION then create.
 Return the initialized session."
   (or (get-buffer inferior-ob-fsharp-buffer-name)
-      (save-window-excursion (fsharp-run-process-if-needed) (sleep-for 0.25) (current-buffer))))
+      (save-window-excursion (fsharp-run-ob-process-if-needed) (sleep-for 0.25) (current-buffer))))
 
 (defun org-babel-variable-assignments:fsharp (params)
   "Return list of fsharp statements assigning the block's variables."
